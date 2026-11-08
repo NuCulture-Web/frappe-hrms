@@ -1,0 +1,33 @@
+{
+	"contract": "module-manifest.v1",
+	"id": "hr-payroll",
+	"name": "HR & Payroll",
+	"description": "Frappe HR on the client's ERPNext site: employees, recruiting, onboarding, attendance and check-ins, shifts, leave, expense claims, appraisals and salary slips. Payroll tax filing is not included.",
+	"scope": "core",
+	"product": "back-office",
+	"frappeApp": "hrms",
+	"enable": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/app/hr"
+	},
+	"probe": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/.well-known/nuculture-build/hr-payroll.json"
+	},
+	"peopleRoles": {
+		"Owner": [
+			"HR Manager"
+		],
+		"Manager": [
+			"HR Manager"
+		],
+		"Bookkeeper": [
+			"HR User"
+		],
+		"Staff": [
+			"Employee Self Service"
+		]
+	}
+}
